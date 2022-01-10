@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="root"></div>
-</body>
-<!-- react , reactDOM -->
-<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-<script>
+  </body>
+  <!-- react , reactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     const root = document.querySelector("#root");
-    const h3 = React.createElement("h3", {
-            id: "title",
-            onMouseEnter: () => console.log("mouse enter")
-        },
-        "Hello I'm a h3");
-    const button = React.createElement("button", {
-        onClick: () => console.log("I clicked")
-    }, "Click me")
-    const container = React.createElement("div", null, [h3, button])
-    ReactDOM.render(container, root);
-</script>
+    const Title = () => (
+      <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        {" "}
+        Hello I 'm a h3
+      </h3>
+    );
+    // const h3 = React.createElement("h3", {
+    // id: "title",
+    // onMouseEnter: () => console.log("mouse enter")
+    // },
+    // "Hello I'm a h3");
+    const Button = () => <button onClick={() => console.log("I clicked")}>Click me</button>;
+    // const button = React.createElement("button", { onClick: () => console.log("I clicked") }, "Click me");
 
+    const Container = () => (
+      <div>
+        <Title />
+        <Button />
+      </div>
+    );
+    // const container = React.createElement("div", null, [title, button]);
+    ReactDOM.render(<Container />, root);
+  </script>
 </html>
