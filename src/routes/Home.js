@@ -9,7 +9,6 @@ function Home() {
         if(json.status === 'ok') {
           setLoading(false);
           setMovieList(() => json.data.movies)
-          console.log(json.data.movies)
         }
       });  
     }, [])
