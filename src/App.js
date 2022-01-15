@@ -1,25 +1,20 @@
-import propTypes from "prop-types";
-import React, { memo, useEffect, useState } from "react";
+import React from "react";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
 } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/movie/:id">
-          <Detail />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>    
+      <Routes>
+        <Route path="/movie/:id" element={<Detail />}/>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </Router>
   );
 }
 

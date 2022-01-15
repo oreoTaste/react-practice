@@ -1,0 +1,7 @@
+.title {
+  margin-left: 3rem;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}

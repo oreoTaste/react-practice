@@ -1,0 +1,28 @@
+.movie {
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2fr;
+  padding: 20px;
+  box-shadow: 5px 5px 20px -2px rgb(0 0 0 / 50%);
+  max-width: 650px;
+}
+.movie__img {
+  position: relative;
+  top: -50px;
+  max-width: 200px;
+  width: 100%;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie__content * {
+  margin-top: 0;
+  text-decoration: none;
+  color: inherit;
+}
+.movie__content__story {
+  min-height: 120px;
+}
+
+.movie__genres {
+  margin-right: 1rem;
+}
