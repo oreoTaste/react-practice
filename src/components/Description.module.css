@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie {
+  margin: 3rem;
+}
+.movie * {
+  margin-bottom: 0;
+}
+.movie__wrapper {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2.5fr;
+  width: 900px;
+}
+.movie__img {
+  height: 320px;
+}
+.star {
+  width: 20px;
+  height: 100%;
+}
+.description {
+  max-width: 1000px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
