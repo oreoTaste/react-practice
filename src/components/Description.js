@@ -2,6 +2,7 @@ import movieStyles from "../components/Movie.module.css";
 import styles from "./Description.module.css";
 import star from "../img/star.png";
 import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Description({url, year, rating, genres, title, medium_cover_image, description_full, background_image}) {
 return (
@@ -9,7 +10,9 @@ return (
       <div className={styles.movie__wrapper}>
         <img className={styles.movie__img} src={medium_cover_image} alt="영화 커버이미지"/>
         <div>
-          <h1><a href={url}>{title}</a></h1>
+          <h1>
+            <Link to={url}>{title}</Link>
+          </h1>
           <div>
             {genres.map((val, ind) => (
               <span className={movieStyles.movie__genres} key={ind}>{val}</span>
